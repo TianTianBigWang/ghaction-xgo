@@ -39,7 +39,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRelease = void 0;
 const httpm = __importStar(__webpack_require__(925));
 exports.getRelease = (version) => __awaiter(void 0, void 0, void 0, function* () {
-    const url = `https://github.com/crazy-max/xgo/releases/${version}`;
+    const url = `https://github.com/TianTianBigWang/xgo/releases/${version}`;
     const http = new httpm.HttpClient('ghaction-xgo');
     return (yield http.getJson(url)).result;
 });
@@ -99,7 +99,7 @@ function getXgo(version) {
         const semver = release.tag_name.replace(/^v/, '');
         core.info(`✅ xgo version found: ${release.tag_name}`);
         const filename = getFilename(semver);
-        const downloadUrl = util.format('https://github.com/crazy-max/xgo/releases/download/%s/%s', release.tag_name, filename);
+        const downloadUrl = util.format('https://github.com/TianTianBigWang/xgo/releases/download/%s/%s', release.tag_name, filename);
         core.info(`⬇️ Downloading ${downloadUrl}...`);
         const downloadPath = yield tc.downloadTool(downloadUrl);
         core.debug(`Downloaded to ${downloadPath}`);
@@ -2510,7 +2510,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports._readLinuxVersionFile = exports._getOsVersion = exports._findMatch = void 0;
-const semver = __importStar(__webpack_require__(562));
+const semver = __importStar(__webpack_require__(911));
 const core_1 = __webpack_require__(186);
 // needs to be require for core node modules to be mocked
 /* eslint @typescript-eslint/no-require-imports: 0 */
@@ -2736,7 +2736,7 @@ const mm = __importStar(__webpack_require__(473));
 const os = __importStar(__webpack_require__(87));
 const path = __importStar(__webpack_require__(622));
 const httpm = __importStar(__webpack_require__(925));
-const semver = __importStar(__webpack_require__(562));
+const semver = __importStar(__webpack_require__(911));
 const stream = __importStar(__webpack_require__(413));
 const util = __importStar(__webpack_require__(669));
 const v4_1 = __importDefault(__webpack_require__(824));
@@ -3363,7 +3363,7 @@ function _unique(values) {
 
 /***/ }),
 
-/***/ 562:
+/***/ 911:
 /***/ ((module, exports) => {
 
 exports = module.exports = SemVer

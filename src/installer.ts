@@ -22,7 +22,7 @@ export async function getXgo(version: string): Promise<Xgo> {
 
   core.info(`✅ xgo version found: ${release.tag_name}`);
   const filename = getFilename(semver);
-  const downloadUrl: string = util.format('https://github.com/crazy-max/xgo/releases/download/%s/%s', release.tag_name, filename);
+  const downloadUrl: string = util.format('https://github.com/TianTianBigWang/xgo/releases/download/%s/%s', release.tag_name, filename);
 
   core.info(`⬇️ Downloading ${downloadUrl}...`);
   const downloadPath: string = await tc.downloadTool(downloadUrl);
